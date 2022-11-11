@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import bakeryData from "./assets/bakery-data.json";
-import BakeryItem from "./components/BakeryItem"
+import BakeryItem from "./components/BakeryItem";
+import CartItem from "./components/CartItem";
 
 /* ####### DO NOT TOUCH -- this makes the image URLs work ####### */
 bakeryData.forEach((item) => {
@@ -35,11 +36,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="Title">Ian's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
+      <h1 className="Title">Ian's Bakery</h1>
 
       <div className="Content">
         <div className="Items">
-          {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
+          {bakeryData.map((item, index) => (
             <BakeryItem 
               name={item.name}
               desc={item.description}
@@ -53,11 +54,13 @@ function App() {
           <h2>Cart</h2>
             <ul>
               {cartItems.map(item => (
-                <li><b>[{item[1]}]</b> {item[0]}</li>
+                <CartItem
+                  count={item[1]}
+                  name={item[0]}>
+                </CartItem>
               ))}
             </ul>
             <h2>Total: ${Math.floor(totalCost*100)/100}</h2>
-          {/* TODO: render a list of items in the cart */}
         </div>
       </div>
     </div>
