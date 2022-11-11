@@ -7,7 +7,7 @@ function BakeryItem(props) {
         <h1 className="ItemName">{props.name}</h1>
         <p className="ItemDesc">{props.desc}</p>
         <h2 className="ItemPrice">${props.price}</h2>
-        <button className="ItemAdd" onClick={props.addItem}>Add to cart</button>
+        <button className="ItemAddBtn" onClick={props.addItem}>Add to cart</button>
       </div>
     );
   }

@@ -19,7 +19,7 @@ body {
 
 .BakeryItem {
   max-width: 250px;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(233, 233, 233);
   padding: 20px;
   color: rgb(0, 0, 0);
 }
@@ -45,10 +45,23 @@ body {
     width: 100%;
 }
 
+.ItemAddBtn {
+    all: unset;
+    width: 150px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(94, 163, 233);
+}
+
+.ItemAddBtn:hover {
+    cursor: pointer;;
+}
+
 .Cart {
     color: black;
     width: calc(30% + 20px);
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(233, 233, 233);
     height: auto;
     padding: 20px;
     margin-left: 20px;
